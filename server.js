@@ -176,7 +176,7 @@ Be specific, data-driven, and actionable. Focus on business viability.`;
   }
 
   // If all AI models fail, use fallback
-  console.log('⚠️ All AI models failed. Using fallback analysis.');
+  console.log(' All AI models failed. Using fallback analysis.');
   res.json({ 
     response: generateFallbackAnalysis(idea),
     model: 'Fallback Analysis (Rule-based)',
@@ -197,7 +197,7 @@ app.get('/health', (req, res) => {
 app.listen(PORT, () => {
   console.log('=========================================');
   console.log(` Server running at http://localhost:${PORT}`);
-  console.log(`🔑 HF Token: ${process.env.HF_TOKEN ? 'Configured ✓' : 'Missing ✗'}`);
+  console.log(` HF Token: ${process.env.HF_TOKEN ? 'Configured ✓' : 'Missing ✗'}`);
   console.log(` Test at: http://localhost:${PORT}`);
   console.log('=========================================');
 });
